@@ -351,6 +351,7 @@ Markdown 区块引用是在段落开头使用 > 符号 ，然后后面紧跟一�
 - 生成文件的效果:  
 <img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
 &emsp;  
+
 ## 八、表格  
 1. **基本语法**   
 Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。  
