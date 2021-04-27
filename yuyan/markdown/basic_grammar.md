@@ -307,6 +307,81 @@ Markdown 区块引用是在段落开头使用 > 符号 ，然后后面紧跟一�
   [runoob]: http://www.runoob.com/  
 &emsp;
 ## 七、图片
-1. 图片语法格式  
-![alt 属性文本](图片地址)  
-![alt 属性文本](图片地址 "可选标题")
+1. **图片语法格式1：**  
+开头一个感叹号!  
+接着一个方括号，里面放上图片的替代文字  
+接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 'title' 属性的文字。即：   
+!+[picture 替代文字]+(图片地址)  
+!+[picture 替代文字]+(图片地址 "可选标题")
+- markdown中的实际代码:
+    ```
+    ![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png)  
+    ![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png "RUNOOB")
+    ```
+- 生成文件的效果:  
+![RUNNOB 图标](http://static.runoob.com/images/runoob-logo.png)  
+![RUNOOB 图标](http://static.runoob.com/images/runoob-logo.png "RUNOOB")  
+&emsp;
+2. **图片语法格式2：**  
+像网址那样对图片网址使用变量:  
+[picture的替代名称][图片网址的变量名称] 
+&emsp;
+文档结尾处:  
+[图片网址的变量名称]: 具体网址   
+- markdown中的实际代码:
+    ```
+    这个链接用 1 作为网址变量 [RUNOOB][1].
+    然后在文档的结尾为变量赋值（网址）
+
+    [1]: http://static.runoob.com/images/runoob-logo.png
+    ```  
+- 生成文件的效果:  
+这个链接用 2 作为网址变量 [RUNOOB][2].
+然后在文档的结尾为变量赋值（网址）
+
+[2]: http://static.runoob.com/images/runoob-logo.png  
+&emsp;
+
+3. **图片语法格式3：**  
+使用<img src= width= >来直接输出图片  
+- markdown中的实际代码:
+    ```
+    <img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
+    ```
+- 生成文件的效果:  
+<img src="http://static.runoob.com/images/runoob-logo.png" width="50%">
+&emsp;  
+## 八、表格  
+1. **基本语法**   
+Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔表头和其他行。  
+- markdown中的实际代码:
+    ```
+    |  表头   | 表头  |
+    |  ----  |  ----  |
+    | 单元格  | 单元格 |
+    | 单元格  | 单元格 |
+    ```  
+- 生成文件的效果:     
+    |  表头   | 表头  |
+    |  ----  |  ----  |
+    | 单元格  | 单元格 |
+    | 单元格  | 单元格 |  
+&emsp;  
+
+2. **对齐方式**  
+我们可以设置表格的对齐方式：  
+    > -: 设置内容和标题栏居右对齐。  
+    > :- 设置内容和标题栏居左对齐。  
+    > :-: 设置内容和标题栏居中对齐。  
+- markdown中的实际代码:
+    ```
+    | 左对齐 | 右对齐 | 居中对齐 |
+    | :-----| ----: | :----: |
+    | 单元格 | 单元格 | 单元格 |
+    | 单元格 | 单元格 | 单元格 |
+    ```  
+- 生成文件的效果:  
+    | 左对齐 | 右对齐 | 居中对齐 |
+    | :-----| ----: | :----: |
+    | 单元格 | 单元格 | 单元格 |
+    | 单元格 | 单元格 | 单元格 |
